@@ -1,7 +1,3 @@
-//socket test
-
-
-
 var net = require('net')
 var http = require('http')
 
