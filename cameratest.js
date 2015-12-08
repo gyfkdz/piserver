@@ -5,7 +5,7 @@ var Camera = require("camerapi");
 var cam = new Camera();
 
 
-//cam.baseDirectory('/YOUR_BASE_DIRECTORY');
+cam.baseDirectory('/nodeserver/piserver');
 
 cam.prepare({"timeout" : 150, 
 		 "width" : 2592,
