@@ -5,8 +5,6 @@
 var net = require('net')
 var http = require('http')
 
-//var JSON = require('JSON')
-
 
 var port = 8080;
 
