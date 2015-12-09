@@ -1,9 +1,11 @@
 
 
+var fs = require("fs")
 var RaspiCam = require("raspicam");
 
 
 var camera = new RaspiCam({
+
 	mode: "photo",
 	output: "./photo/image.jpg",
 	encoding: "jpg",
@@ -26,5 +28,12 @@ camera.on("exit", function( timestamp ){
 });
 
 camera.start();
+
+
+
+ 
+
+
+
 
 
