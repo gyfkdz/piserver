@@ -1,0 +1,76 @@
+<html>
+<head>
+<title> Camera test </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+
+<p> Hello </p>
+<p> Hello </p>
+<p> Hello </p>
+<p> Hello </p>
+
+<div id="camerashow">  
+
+</div>
+<button id="butt"> Click Me </button>
+
+asd
+
+
+ <form>
+ 
+  <input type="range" name="points" min="0" max="10">
+  
+  
+  <button id="buttform" name="button"> Click Me </button>
+
+</form>
+
+
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+	
+   $("#butt").click(function(){
+   
+   
+       $("#camerashow").html(" LOADING...");
+	   
+	   
+	   $.ajax({url: "camera?cachebuster=" + new Date().getTime(), success: function(result){
+        $("#camerashow").html(result);
+    }});
+		
+		
+    });
+	
+		
+   $("#buttform").click(function(event ){
+		event.preventDefault();
+   
+	   var x = $("form").serializeArray();
+	   
+	   $.ajax({type:"GET", data:x,url: "post1", success: function(result){
+          $("#camerashow").html(result);
+		
+    }});
+		
+		
+    });
+	
+	
+	
+});
+
+
+
+</script>
+
+</body>
+</html>
